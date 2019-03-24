@@ -1,0 +1,1 @@
+1.先加载static资源，然后再初始化非static资源，先处化static{}再初始化static变量，再执行{}，再初始化非static变量，最后执行contrust
