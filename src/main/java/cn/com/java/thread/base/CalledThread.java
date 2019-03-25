@@ -6,11 +6,7 @@ public class CalledThread {
 
     public static void main(String[] args) {
         ExecutorService service = Executors.newSingleThreadExecutor();
-        Future<String> future = service.submit(new Callable<String>() {
-            public String call() throws Exception {
-                return "ab";
-            }
-        });
+        Future<String> future = service.submit(() -> "ab");
         try {
             System.out.println(future.get());
         } catch (InterruptedException e) {
